@@ -1,0 +1,55 @@
+{
+  "name": "signals-sortlist-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the Signals lead intelligence API. Gives AI agents (Claude, Cursor, etc.) tools to manage businesses, subscriptions, leads, and webhooks.",
+  "main": "dist/index.js",
+  "bin": {
+    "signals-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "signals",
+    "leads",
+    "lead-generation",
+    "sales-intelligence",
+    "ai-agent",
+    "claude",
+    "cursor",
+    "automation"
+  ],
+  "author": "Sortlist",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sortlist/signals-mcp.git"
+  },
+  "homepage": "https://github.com/sortlist/signals-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/sortlist/signals-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "tsup": "^8.5.1",
+    "typescript": "^5.3.3"
+  }
+}
