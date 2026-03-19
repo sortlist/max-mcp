@@ -52,6 +52,16 @@ claude mcp add signals -- npx -y signals-sortlist-mcp -e SIGNALS_API_KEY=your_ap
 
 > Get your API key from **Settings > API Keys** in your [Signals dashboard](https://signals.sortlist.com/).
 
+### For AI Agents
+
+Install the Signals skill for your AI agent (Cursor, Claude Code, OpenClaw, etc.):
+
+```bash
+npx skills add sortlist/signals-cli
+```
+
+This installs a [SKILL.md](https://github.com/sortlist/signals-cli/blob/main/SKILL.md) that gives your agent full knowledge of the CLI commands, patterns, and workflows.
+
 ---
 
 ## Tools
