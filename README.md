@@ -15,7 +15,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 ```json
 {
   "mcpServers": {
-    "signals": {
+    "max": {
       "command": "npx",
       "args": ["-y", "sortlist-max-mcp"],
       "env": {
@@ -33,7 +33,7 @@ Add to your Cursor MCP settings (`.cursor/mcp.json`):
 ```json
 {
   "mcpServers": {
-    "signals": {
+    "max": {
       "command": "npx",
       "args": ["-y", "sortlist-max-mcp"],
       "env": {
@@ -47,7 +47,7 @@ Add to your Cursor MCP settings (`.cursor/mcp.json`):
 ### Claude Code
 
 ```bash
-claude mcp add signals -- npx -y sortlist-max-mcp -e MAX_API_KEY=your_api_key
+claude mcp add max -- npx -y sortlist-max-mcp -e MAX_API_KEY=your_api_key
 ```
 
 > Get your API key from **Settings > API Keys** in your [Max dashboard](https://yourmax.ai/).
