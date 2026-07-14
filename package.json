@@ -1,6 +1,6 @@
 {
   "name": "sortlist-max-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server for the Max lead intelligence API. Gives AI agents (Claude, Cursor, etc.) tools to manage businesses, subscriptions, leads, and webhooks.",
   "main": "dist/index.js",
   "bin": {

@@ -16,7 +16,7 @@ if (!apiKey) {
 const api = new ApiClient(apiKey);
 
 const server = new McpServer({
-  name: 'signals',
+  name: 'max',
   version: '1.0.0',
 });
 
