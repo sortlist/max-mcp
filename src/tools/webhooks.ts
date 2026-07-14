@@ -1,8 +1,8 @@
 import { z } from 'zod';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { SignalsAPI } from '../api.js';
+import { ApiClient } from '../api.js';
 
-export function registerWebhookTools(server: McpServer, api: SignalsAPI) {
+export function registerWebhookTools(server: McpServer, api: ApiClient) {
   server.tool(
     'list_webhooks',
     'List all webhooks configured for a business',

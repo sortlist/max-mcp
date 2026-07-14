@@ -1,8 +1,8 @@
 import { z } from 'zod';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { SignalsAPI } from '../api.js';
+import { ApiClient } from '../api.js';
 
-export function registerSubscriptionTools(server: McpServer, api: SignalsAPI) {
+export function registerSubscriptionTools(server: McpServer, api: ApiClient) {
   server.tool(
     'list_subscriptions',
     'List all subscriptions (signal monitors) for a business',

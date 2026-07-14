@@ -1,19 +1,19 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { SignalsAPI } from './api.js';
+import { ApiClient } from './api.js';
 import { registerSignalTools } from './tools/signals.js';
 import { registerBusinessTools } from './tools/businesses.js';
 import { registerSubscriptionTools } from './tools/subscriptions.js';
 import { registerLeadTools } from './tools/leads.js';
 import { registerWebhookTools } from './tools/webhooks.js';
 
-const apiKey = process.env.SIGNALS_API_KEY;
+const apiKey = process.env.MAX_API_KEY;
 if (!apiKey) {
-  console.error('SIGNALS_API_KEY environment variable is required');
+  console.error('MAX_API_KEY environment variable is required');
   process.exit(1);
 }
 
-const api = new SignalsAPI(apiKey);
+const api = new ApiClient(apiKey);
 
 const server = new McpServer({
   name: 'signals',

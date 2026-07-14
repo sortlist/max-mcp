@@ -1,12 +1,12 @@
 import fetch from 'node-fetch';
 
-export class SignalsAPI {
+export class ApiClient {
   private apiKey: string;
   private baseUrl: string;
 
   constructor(apiKey: string) {
     this.apiKey = apiKey;
-    this.baseUrl = (process.env.SIGNALS_API_URL || 'https://api.meetsignals.ai').replace(/\/$/, '');
+    this.baseUrl = (process.env.MAX_API_URL || 'https://api.yourmax.ai').replace(/\/$/, '');
   }
 
   async request(endpoint: string, options: any = {}) {

@@ -1,10 +1,10 @@
 {
-  "name": "signals-sortlist-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for the Signals lead intelligence API. Gives AI agents (Claude, Cursor, etc.) tools to manage businesses, subscriptions, leads, and webhooks.",
+  "name": "sortlist-max-mcp",
+  "version": "1.0.1",
+  "description": "MCP server for the Max lead intelligence API. Gives AI agents (Claude, Cursor, etc.) tools to manage businesses, subscriptions, leads, and webhooks.",
   "main": "dist/index.js",
   "bin": {
-    "signals-mcp": "dist/index.js"
+    "max-mcp": "dist/index.js"
   },
   "scripts": {
     "dev": "tsup --watch",
@@ -33,11 +33,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sortlist/signals-mcp.git"
+    "url": "git+https://github.com/sortlist/max-mcp.git"
   },
-  "homepage": "https://github.com/sortlist/signals-mcp#readme",
+  "homepage": "https://github.com/sortlist/max-mcp#readme",
   "bugs": {
-    "url": "https://github.com/sortlist/signals-mcp/issues"
+    "url": "https://github.com/sortlist/max-mcp/issues"
   },
   "engines": {
     "node": ">=18.0.0"

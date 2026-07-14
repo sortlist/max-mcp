@@ -1,8 +1,8 @@
-# Signals MCP Server
+# Max MCP Server
 
-[![npm](https://img.shields.io/npm/v/signals-sortlist-mcp)](https://www.npmjs.com/package/signals-sortlist-mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/v/sortlist-max-mcp)](https://www.npmjs.com/package/sortlist-max-mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
-**MCP server for the [Signals](https://signals.sortlist.com/) lead intelligence API** — gives AI agents tools to discover leads, manage subscriptions, and automate sales workflows.
+**MCP server for the [Max](https://yourmax.ai/) lead intelligence API** — gives AI agents tools to discover leads, manage subscriptions, and automate sales workflows.
 
 ---
 
@@ -17,9 +17,9 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
   "mcpServers": {
     "signals": {
       "command": "npx",
-      "args": ["-y", "signals-sortlist-mcp"],
+      "args": ["-y", "sortlist-max-mcp"],
       "env": {
-        "SIGNALS_API_KEY": "your_api_key"
+        "MAX_API_KEY": "your_api_key"
       }
     }
   }
@@ -35,9 +35,9 @@ Add to your Cursor MCP settings (`.cursor/mcp.json`):
   "mcpServers": {
     "signals": {
       "command": "npx",
-      "args": ["-y", "signals-sortlist-mcp"],
+      "args": ["-y", "sortlist-max-mcp"],
       "env": {
-        "SIGNALS_API_KEY": "your_api_key"
+        "MAX_API_KEY": "your_api_key"
       }
     }
   }
@@ -47,26 +47,26 @@ Add to your Cursor MCP settings (`.cursor/mcp.json`):
 ### Claude Code
 
 ```bash
-claude mcp add signals -- npx -y signals-sortlist-mcp -e SIGNALS_API_KEY=your_api_key
+claude mcp add signals -- npx -y sortlist-max-mcp -e MAX_API_KEY=your_api_key
 ```
 
-> Get your API key from **Settings > API Keys** in your [Signals dashboard](https://signals.sortlist.com/).
+> Get your API key from **Settings > API Keys** in your [Max dashboard](https://yourmax.ai/).
 
 ### For AI Agents
 
-Install the Signals skill for your AI agent (Cursor, Claude Code, OpenClaw, etc.):
+Install the Max skill for your AI agent (Cursor, Claude Code, OpenClaw, etc.):
 
 ```bash
-npx skills add sortlist/signals-cli
+npx skills add sortlist/max-cli
 ```
 
-This installs a [SKILL.md](https://github.com/sortlist/signals-cli/blob/main/SKILL.md) that gives your agent full knowledge of the CLI commands, patterns, and workflows.
+This installs a [SKILL.md](https://github.com/sortlist/max-cli/blob/main/SKILL.md) that gives your agent full knowledge of the CLI commands, patterns, and workflows.
 
 ---
 
 ## Tools
 
-The server exposes 19 tools covering the full Signals API:
+The server exposes 19 tools covering the full Max API:
 
 ### Signals (catalog)
 
@@ -118,16 +118,16 @@ The server exposes 19 tools covering the full Signals API:
 
 | Variable | Required | Description |
 |---|---|---|
-| `SIGNALS_API_KEY` | Yes | Your Signals API key |
-| `SIGNALS_API_URL` | No | Override the API base URL (defaults to `https://api.meetsignals.ai`) |
+| `MAX_API_KEY` | Yes | Your Max API key |
+| `MAX_API_URL` | No | Override the API base URL (defaults to `https://api.yourmax.ai`) |
 
 ---
 
 ## Development
 
 ```bash
-git clone https://github.com/sortlist/signals-mcp.git
-cd signals-mcp
+git clone https://github.com/sortlist/max-mcp.git
+cd max-mcp
 npm install
 npm run dev    # Watch mode
 npm run build  # Production build
@@ -138,7 +138,7 @@ npm run build  # Production build
 ```
 src/
   index.ts          # MCP server entry point (stdio transport)
-  api.ts            # SignalsAPI HTTP client
+  api.ts            # ApiClient HTTP client
   tools/
     signals.ts      # list_signals, get_signal
     businesses.ts   # Business CRUD + ICP management
@@ -151,10 +151,10 @@ src/
 
 ## Links
 
-- **Website:** [signals.sortlist.com](https://signals.sortlist.com/)
-- **API Docs:** [signals.sortlist.com/docs/api](https://signals.sortlist.com/docs/api)
-- **CLI:** [signals-sortlist-cli](https://www.npmjs.com/package/signals-sortlist-cli)
-- **GitHub:** [sortlist/signals-mcp](https://github.com/sortlist/signals-mcp)
+- **Website:** [yourmax.ai](https://yourmax.ai/)
+- **API Docs:** [yourmax.ai/docs/api](https://yourmax.ai/docs/api)
+- **CLI:** [sortlist-max-cli](https://www.npmjs.com/package/sortlist-max-cli)
+- **GitHub:** [sortlist/max-mcp](https://github.com/sortlist/max-mcp)
 
 ---
 

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { SignalsAPI } from '../api.js';
+import { ApiClient } from '../api.js';
 
 const icpSchema = z.object({
   target_locations: z.array(z.string()).optional().describe('Target geographic locations'),
@@ -10,7 +10,7 @@ const icpSchema = z.object({
   description: z.string().optional().describe('Free-text ICP description'),
 }).describe('Ideal Customer Profile attributes');
 
-export function registerBusinessTools(server: McpServer, api: SignalsAPI) {
+export function registerBusinessTools(server: McpServer, api: ApiClient) {
   server.tool(
     'list_businesses',
     'List all businesses belonging to your team',
